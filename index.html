@@ -1,248 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Expenza: Expense Tracker</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2196F3;
-            border-bottom: 3px solid #2196F3;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #424242;
-            margin-top: 30px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-bottom: 15px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .last-updated {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .contact {
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: January 6, 2025</p>
+# Privacy Policy Setup Guide
 
-        <p>
-            This Privacy Policy describes how Expenza: Expense Tracker ("we", "our", or "the app") 
-            collects, uses, and protects your information when you use our mobile application.
-        </p>
+This guide explains how to host and link your privacy policy for Google Play Console.
 
-        <h2>1. Information We Collect</h2>
-        <p>Expenza is designed with privacy in mind. We collect and store the following information locally on your device:</p>
-        <ul>
-            <li><strong>Expense Data:</strong> Transaction amounts, dates, descriptions, categories, and payment modes</li>
-            <li><strong>User Preferences:</strong> Currency settings, language preferences, default payment modes, and app settings</li>
-            <li><strong>Book Data:</strong> Expense books you create to organize your expenses</li>
-            <li><strong>Categories and Payment Modes:</strong> Custom categories and payment methods you create</li>
-        </ul>
-        <p>
-            <strong>Important:</strong> All this data is stored locally on your device in an encrypted SQLite database. 
-            We do not automatically collect or transmit this data to our servers.
-        </p>
+## Files Created
 
-        <h2>2. Camera Permission</h2>
-        <p>
-            Expenza requests camera permission to enable QR code scanning functionality. This feature allows you to:
-        </p>
-        <ul>
-            <li>Scan QR codes for UPI payments</li>
-            <li>Quickly extract payment information from QR codes</li>
-        </ul>
-        <p>
-            <strong>Camera Usage:</strong> The camera is only accessed when you explicitly use the QR code scanning feature. 
-            We do not record, store, or transmit any camera images or video. All camera processing happens locally on your device, 
-            and no camera data leaves your device.
-        </p>
-        <p>
-            You can deny camera permission and still use all other features of the app. The camera permission is optional.
-        </p>
+1. **PRIVACY_POLICY.html** - A styled HTML version of the privacy policy (ready to host)
+2. **PRIVACY_POLICY.md** - A Markdown version (for GitHub or documentation)
 
-        <h2>3. Data Storage and Security</h2>
-        <p>
-            <strong>Local Storage:</strong> All your expense data is stored locally on your device using SQLite database 
-            with encryption. Your data never leaves your device unless you explicitly choose to back it up.
-        </p>
-        <p>
-            <strong>Backup and Restore:</strong> You have the option to back up your data to:
-        </p>
-        <ul>
-            <li><strong>Local Storage:</strong> Save encrypted backup files to your device's storage</li>
-            <li><strong>Google Drive:</strong> If you choose to connect your Google account, you can back up your data to Google Drive</li>
-        </ul>
-        <p>
-            Backups are encrypted before being stored. Only you can restore your backups using the app. 
-            We do not have access to your backup files or their contents.
-        </p>
+## Hosting Options
 
-        <h2>4. Google Sign-In</h2>
-        <p>
-            If you choose to use Google Sign-In, we use it solely for:
-        </p>
-        <ul>
-            <li>Authenticating your Google account to access Google Drive</li>
-            <li>Enabling backup and restore functionality via Google Drive</li>
-        </ul>
-        <p>
-            We only request the minimum necessary permissions (email and Google Drive file access). 
-            We do not use your Google account information for any other purpose.
-        </p>
+### Option 1: Separate Public GitHub Repo (Recommended for Private Main Repo)
 
-        <h2>5. Advertising</h2>
-        <p>
-            Expenza displays advertisements through:
-        </p>
-        <ul>
-            <li><strong>Google Mobile Ads:</strong> Google's advertising network</li>
-            <li><strong>Facebook Audience Network:</strong> Facebook's advertising network</li>
-        </ul>
-        <p>
-            These advertising networks may collect information about your device and usage patterns to show relevant ads. 
-            This information is collected by the advertising networks, not by us. Please refer to their privacy policies:
-        </p>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-            <li><a href="https://www.facebook.com/privacy/explanation" target="_blank">Facebook Privacy Policy</a></li>
-        </ul>
-        <p>
-            You can remove ads by purchasing the premium version of the app through in-app purchase.
-        </p>
+Since your main repo is private, create a separate **public** repository just for the privacy policy:
 
-        <h2>6. Internet and Network Permissions</h2>
-        <p>
-            Expenza uses internet and network permissions for:
-        </p>
-        <ul>
-            <li>Checking internet connectivity</li>
-            <li>Displaying advertisements</li>
-            <li>Google Sign-In and Google Drive backup/restore</li>
-            <li>App version checking (to notify you of updates)</li>
-        </ul>
-        <p>
-            We do not transmit your expense data over the internet except when you explicitly choose to back up to Google Drive.
-        </p>
+1. Create a new public GitHub repository (e.g., `expenza-privacy-policy`)
+2. Upload `PRIVACY_POLICY.html` to the repository (rename to `index.html` for cleaner URL)
+3. Enable GitHub Pages:
+   - Go to repository Settings → Pages
+   - Select source branch (usually `main` or `master`)
+   - Save
+4. Your privacy policy will be available at:
+   - `https://[your-username].github.io/expenza-privacy-policy/`
+   - This keeps your main code private while making the privacy policy public
 
-        <h2>7. Notifications</h2>
-        <p>
-            Expenza may request notification permission to:
-        </p>
-        <ul>
-            <li>Send you reminders about expense tracking</li>
-            <li>Notify you about app updates</li>
-        </ul>
-        <p>
-            You can disable notifications at any time through your device settings.
-        </p>
+**Quick Setup:**
+```bash
+# Create a new directory for the privacy policy repo
+mkdir expenza-privacy-policy
+cd expenza-privacy-policy
+cp /path/to/PRIVACY_POLICY.html index.html
+git init
+git add index.html
+git commit -m "Add privacy policy"
+git branch -M main
+gh repo create expenza-privacy-policy --public
+git remote add origin https://github.com/yourusername/expenza-privacy-policy.git
+git push -u origin main
+# Then enable GitHub Pages in repo settings
+```
 
-        <h2>8. Data Sharing</h2>
-        <p>
-            <strong>We do not sell, trade, or rent your personal data to third parties.</strong>
-        </p>
-        <p>
-            Your expense data remains on your device unless you explicitly choose to back it up. 
-            When you back up to Google Drive, the data is stored in your own Google Drive account, 
-            which is governed by Google's privacy policy.
-        </p>
+### Option 2: Netlify (Free & Easy)
 
-        <h2>9. Data Deletion</h2>
-        <p>
-            You can delete your data at any time by:
-        </p>
-        <ul>
-            <li>Deleting individual expenses, categories, or payment modes within the app</li>
-            <li>Uninstalling the app (this will delete all local data)</li>
-            <li>Deleting backup files from your device or Google Drive</li>
-        </ul>
-        <p>
-            Once deleted, data cannot be recovered unless you have a backup.
-        </p>
+1. Go to [Netlify](https://www.netlify.com/) and sign up (free)
+2. Drag and drop the folder containing `PRIVACY_POLICY.html` (or use Netlify CLI)
+3. Your privacy policy will be available at: `https://[random-name].netlify.app/PRIVACY_POLICY.html`
+4. You can add a custom domain later if needed
 
-        <h2>10. Children's Privacy</h2>
-        <p>
-            Expenza is not intended for children under the age of 13. We do not knowingly collect 
-            personal information from children under 13. If you are a parent or guardian and believe 
-            your child has provided us with personal information, please contact us.
-        </p>
+**Netlify CLI Setup:**
+```bash
+# Install Netlify CLI: npm install -g netlify-cli
+netlify login
+netlify deploy --prod --dir . --file PRIVACY_POLICY.html
+```
 
-        <h2>11. Changes to This Privacy Policy</h2>
-        <p>
-            We may update this Privacy Policy from time to time. We will notify you of any changes 
-            by posting the new Privacy Policy on this page and updating the "Last Updated" date.
-        </p>
-        <p>
-            You are advised to review this Privacy Policy periodically for any changes. 
-            Changes to this Privacy Policy are effective when they are posted on this page.
-        </p>
+### Option 3: Vercel (Free & Easy)
 
-        <h2>12. Your Rights</h2>
-        <p>
-            You have the right to:
-        </p>
-        <ul>
-            <li>Access your data (all data is stored locally on your device)</li>
-            <li>Export your data (via CSV export or backup functionality)</li>
-            <li>Delete your data (as described in Section 9)</li>
-            <li>Control app permissions (through your device settings)</li>
-        </ul>
+1. Go to [Vercel](https://vercel.com/) and sign up (free)
+2. Create a new project and upload `PRIVACY_POLICY.html`
+3. Your privacy policy will be available at: `https://[project-name].vercel.app/PRIVACY_POLICY.html`
 
-        <h2>13. Contact Us</h2>
-        <div class="contact">
-            <p>
-                If you have any questions about this Privacy Policy, please contact us:
-            </p>
-            <p>
-                <strong>Email:</strong> [Your Contact Email]<br>
-                <strong>App Package:</strong> com.expenza.expensetracker
-            </p>
-            <p>
-                <em>Note: Please replace [Your Contact Email] with your actual contact email address.</em>
-            </p>
-        </div>
+### Option 4: GitHub Gist (Simple but Limited)
 
-        <h2>14. Consent</h2>
-        <p>
-            By using Expenza: Expense Tracker, you consent to this Privacy Policy. 
-            If you do not agree with this policy, please do not use the app.
-        </p>
+1. Go to [GitHub Gist](https://gist.github.com/)
+2. Create a new gist with `PRIVACY_POLICY.html` content
+3. Make it public
+4. Use the raw URL: `https://gist.githubusercontent.com/[username]/[gist-id]/raw/PRIVACY_POLICY.html`
+   - Note: This works but the URL is not very clean
 
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-        <p style="text-align: center; color: #666; font-size: 0.9em;">
-            © 2025 Expenza: Expense Tracker. All rights reserved.
-        </p>
-    </div>
-</body>
-</html>
+### Option 5: Your Own Website
+
+1. Upload `PRIVACY_POLICY.html` to your web server
+2. Access it via: `https://yourdomain.com/privacy-policy.html`
+
+### Option 6: Privacy Policy Generator Services
+
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
+- [FreePrivacyPolicy](https://www.freeprivacypolicy.com/)
+- [Termly](https://termly.io/)
+
+## Adding to Google Play Console
+
+1. Go to [Google Play Console](https://play.google.com/console)
+2. Select your app (Expenza: Expense Tracker)
+3. Navigate to: **Policy** → **App content**
+4. Scroll to **Privacy Policy** section
+5. Click **Start** or **Manage**
+6. Enter your privacy policy URL (e.g., `https://yourusername.github.io/yourrepo/PRIVACY_POLICY.html`)
+7. Click **Save**
+
+## Important Notes
+
+1. **Update Contact Email:** Before publishing, replace `[Your Contact Email]` in the privacy policy with your actual contact email address.
+
+2. **Accessibility:** Make sure the privacy policy URL is:
+   - Publicly accessible (no login required)
+   - Uses HTTPS (required by Google Play)
+   - Returns a 200 OK status code
+
+3. **Content Updates:** If you update the privacy policy, update the "Last Updated" date in the file.
+
+4. **Testing:** Test the URL in an incognito/private browser window to ensure it's publicly accessible.
+
+## Quick Checklist
+
+- [ ] Privacy policy hosted and accessible via HTTPS
+- [ ] Contact email updated in privacy policy
+- [ ] Privacy policy URL added to Google Play Console
+- [ ] Privacy policy URL tested in incognito mode
+- [ ] "Last Updated" date is current
+
+## Recommended: Separate Public Repo for Privacy Policy
+
+Since your main repo is private, create a separate public repository:
+
+```bash
+# Create a new directory
+mkdir expenza-privacy-policy
+cd expenza-privacy-policy
+
+# Copy and rename the privacy policy
+cp /path/to/PRIVACY_POLICY.html index.html
+
+# Initialize git
+git init
+git add index.html
+git commit -m "Add privacy policy for Expenza app"
+
+# Create public repo (using GitHub CLI)
+gh repo create expenza-privacy-policy --public --source=. --remote=origin
+git push -u origin main
+
+# Or manually:
+# 1. Create a new public repo on GitHub named "expenza-privacy-policy"
+# 2. Then: git remote add origin https://github.com/yourusername/expenza-privacy-policy.git
+# 3. git push -u origin main
+```
+
+Then enable GitHub Pages:
+1. Go to the repository on GitHub
+2. Settings → Pages
+3. Select branch: `main` and folder: `/ (root)`
+4. Save
+
+Your privacy policy URL will be:
+`https://yourusername.github.io/expenza-privacy-policy/`
+
+This keeps your main codebase private while making the privacy policy publicly accessible.
 
